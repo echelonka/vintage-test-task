@@ -1,0 +1,109 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+body {
+    margin: 0;
+}
+
+#app {
+    font-family: 'SuisseIntl', Helvetica, sans-serif;
+    color: $grey;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    padding: 20px 30px;
+    @include desktop {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 80px 0 90px;
+    }
+
+    &--half {
+        @include desktop {
+            width: 580px;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    &__columns {
+        @include tablets {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 45px;
+        }
+        @include laptop {
+            grid-column-gap: 90px;
+        }
+
+        &--without-gap {
+            grid-column-gap: 0;
+        }
+    }
+}
+
+// Headings
+h1, h2 {
+    font-weight: 300;
+}
+
+h1 {
+    margin: 0 0 15px;
+    font-size: 30px;
+    @include tablets {
+        font-size: 50px;
+    }
+    @include desktop {
+        margin: -30px 0 14px;
+    }
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    @include tablets {
+        margin: 10px 0 30px;
+        font-size: 35px;
+    }
+}
+
+// Text
+.text {
+    &--green {
+        color: $green;
+    }
+    &--white {
+        color: $white;
+    }
+    &--link {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+a {
+    text-decoration: none;
+    line-height: 2;
+    font-weight: 100;
+}
+
+p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.85;
+    @include tablets {
+        font-size: 15.5px;
+    }
+}
+
+address {
+    font-style: normal;
+}
+
+input[type='checkbox'] {
+    display: none;
+}

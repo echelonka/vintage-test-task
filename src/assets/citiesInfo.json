@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Kyiv",
+    "coordinates": {
+      "lat": 50.4547,
+      "lng": 30.5238
+    },
+    "location": {
+      "companyName": "Global Message Services Ukraine LLC",
+      "address": [
+        "Kyiv, Stepan Bandera, 33",
+        "02066",
+        "Ukraine"
+      ]
+    }
+  },
+  {
+    "name": "New York",
+    "coordinates": {
+      "lat": 40.7850,
+      "lng": -73.9682
+    },
+    "location": {
+      "companyName": "Global Message Services USA LLC",
+      "address": [
+        "New York, White Stone st., 2A",
+        "609343",
+        "USA"
+      ]
+    }
+  },
+  {
+    "name": "Guangzhou",
+    "coordinates": {
+      "lat": 23.1289,
+      "lng": 113.2532
+    },
+    "location": {
+      "companyName": "Guangzhou",
+      "address": [
+        "Guangzhou, Ganzhi Cho, 123",
+        "125047",
+        "China"
+      ]
+    }
+  },
+  {
+    "name": "Barcelona",
+    "coordinates": {
+      "lat": 41.390205,
+      "lng": 2.154007
+    },
+    "location": {
+      "companyName": "Global Message Services Barcelona",
+      "address": [
+        "Barcelona, Juron, 2",
+        "22000",
+        "Spain"
+      ]
+    }
+  }
+]
