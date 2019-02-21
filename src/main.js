@@ -3,13 +3,14 @@ import App from './App.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import * as VueGoogleMaps from 'vue2-google-maps'
+import config from '../config'
 
 Vue.config.productionTip = false
 
 Vue.use(VueAxios, axios)
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyBisSqlZ0mwGtPdVz3ox0IZLVuw0MNsMBY',
+    key: config.googleAPIKey,
     libraries: 'places'
   }
 })

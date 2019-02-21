@@ -15,12 +15,14 @@
                         {{city}}
                     </a>
                 </div>
-                <div class="locations__info">
-                    <div class="locations__info-name">{{officeLocation.companyName}}</div>
-                    <address class="locations__info-address">
-                        <p v-for="address in officeLocation.address" :key="address">{{address}}</p>
-                    </address>
-                </div>
+                <transition name="slide-fade" mode="out-in">
+                    <div class="locations__info" v-for="city in citiesInfo" :key="city.name" v-if="city.name === selectedCity">
+                        <div class="locations__info-name">{{city.location.companyName}}</div>
+                        <address class="locations__info-address">
+                            <p v-for="address in city.location.address" :key="address">{{address}}</p>
+                        </address>
+                    </div>
+                </transition>
             </div>
             <div>
                 <GmapMap
@@ -96,7 +98,7 @@
             margin: 0 20px 0 0;
             color: #fff;
             font-size: 12px;
-            transition: color .3s ease;
+            transition: color $transition;
             &:hover, &--active {
                 color: $green;
             }
@@ -115,6 +117,16 @@
                     font-size: 12px;
                 }
             }
+        }
+    }
+
+    .slide-fade {
+        &-enter-active, &-leave-active {
+            transition: opacity $transition, transform $transition;
+        }
+        &-enter, &-leave-to {
+            transform: translateX(10px);
+            opacity: 0;
         }
     }
 </style>

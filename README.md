@@ -1,29 +1,21 @@
-# vintage-test-task
+# Vintage test task
 
 ## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+1. `yarn install`
+2. Copy `config/index.example.js` to `config/index.js` and paste appropriate values
+3. `yarn serve`
 
 ### Compiles and minifies for production
 ```
-yarn run build
+yarn build
 ```
 
 ### Run your tests
 ```
-yarn run test
+yarn test
 ```
 
 ### Lints and fixes files
 ```
-yarn run lint
+yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

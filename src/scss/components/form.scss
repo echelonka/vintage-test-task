@@ -12,7 +12,7 @@
         cursor: pointer;
         -webkit-appearance: none;
         outline: none;
-        transition: color .3s ease, background-color .3s ease, opacity .3s ease;
+        transition: color .3s ease, background-color .3s ease, opacity $transition;
         &:hover {
             background-color: $white;
             color: $grey
@@ -46,7 +46,7 @@
             font-size: 18px;
             border-bottom: 1px solid $grey;
             color: $white;
-            transition: border-bottom-color .3s ease;
+            transition: border-bottom-color $transition;
             box-sizing: border-box;
             font-family: 'SuisseIntl', Helvetica, sans-serif;
             &:focus {
@@ -63,7 +63,7 @@
             transform: translateY(-50%);
             font-size: 18px;
             position: absolute;
-            transition: color .3s ease;
+            transition: color $transition;
             cursor: text;
         }
 
